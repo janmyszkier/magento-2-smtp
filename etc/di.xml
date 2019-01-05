@@ -39,5 +39,8 @@
             <argument name="mainTable" xsi:type="string">mageplaza_smtp_log</argument>
             <argument name="resourceModel" xsi:type="string">Mageplaza\Smtp\Model\ResourceModel\Log</argument>
         </arguments>
-    </virtualType>
+    </virtualType>   
+    <type name="Magento\Framework\Mail\Template\TransportBuilderByStore">
+        <plugin  name="MageplazaGmailSmtpAppTransportBuilderByStore" type="Mageplaza\Smtp\Fix\Message" />
+    </type>
 </config>
